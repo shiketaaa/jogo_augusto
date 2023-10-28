@@ -13,5 +13,5 @@ for i in range (0,len(x)):
     y.append(x[i])
 y.sort(reverse= True)
 print (*y)
-# lista = [6,5,7,3,4
+# lista = [6,5,7,3,4]
 # print (sorted(lista))
