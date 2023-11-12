@@ -1,34 +1,36 @@
 import os
+from jogo import RodarJogo
+from highscores import GetPontos
 
-menu = 1
-while menu !=3:
+def Main():
+    menu = '1'
+    while menu !='3':
 
-    menu = int(input("""
-    -----MENU-----
-    --1 - JOGAR --
-    --2 - HIGHSCORES
-    --3 - SAIR -----\n"""))
+        menu = (input("""
+        -----MENU-----
+        --1 - JOGAR --
+        --2 - HIGHSCORES
+        --3 - SAIR -----\n"""))
 
 
-    match menu:
+        match menu:
 
-        case 1:
-            player = input('digite seu nome:')
-            os.system ('cls')
+            case '1':
+                RodarJogo()
+
+
+            case '2':
+                GetPontos()
             
+            case '3':
+                print('saiu')
+                exit()
 
+            case _:
+                print('opcao invalida')
 
-        case 2:
-            arquivo = open('pontuacoes.txt','r')
-            print (*arquivo.readlines(25))
-            arquivo.close
-        
-        case 3:
-            print('saiu')
-            break
+        os.system('pause')
+        os.system('cls')
 
-        case _:
-            print('errado')
-
-    os.system('pause')
-    os.system('cls')
+if __name__=="__main__":
+    Main()
