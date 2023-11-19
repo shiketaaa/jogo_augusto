@@ -14,11 +14,4 @@ def GetPontos():
     for i in range (5):
         print (numerosordenados[i])
 
-    # y = []
-    # for i in range (0,len(x)):
-    #     y.append(x[i])
-    # y.sort(reverse= True)
-    # print (*y)
     arquivo.close
-# lista = [6,5,7,3,4]
-# print (sorted(lista))
